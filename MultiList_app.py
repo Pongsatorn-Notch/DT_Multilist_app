@@ -16,6 +16,4 @@ pages = [
 st.navigation(pages)
 
 st.title("Welcome to the Home Page")
-
 st.write("Click on a page in the sidebar to navigate.")
-
