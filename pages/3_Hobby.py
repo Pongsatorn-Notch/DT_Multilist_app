@@ -2,8 +2,11 @@ import streamlit as st
 import pandas as pd
 
 # ส่วนหลักของหน้า Hobby
-st.markdown("# 🎨 My Hobbies & Interests")
+st.markdown("# 🕹️ My Hobbies & Interests") 
 st.write("---") 
+
+
+
 
 # งานอดิเรกหลัก
 st.header("Major Hobbies")
@@ -11,11 +14,9 @@ st.header("Major Hobbies")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("📸 Photography")
-    st.write("ชอบการถ่ายภาพวิวทิวทัศน์ โดยเฉพาะช่วง Golden Hour และการถ่ายภาพบุคคล")
-    # คุณสามารถเพิ่มรูปภาพได้
-    # st.image("path/to/my_photo.jpg", caption="Sunrise Shot")
-    st.code("Camera: Sony A7 IV, Lens: 24-70mm")
+    st.subheader("🎮 Gaming")  
+    st.write("ชอบการเล่นวิดีโอเกมหลายประเภท โดยเฉพาะเกมแนว Strategy และ RPG") 
+    st.code("Platform: PC (Steam, Epic), Console: PS5") 
 
 with col2:
     st.subheader("💻 Coding & Tech Projects")
@@ -28,9 +29,10 @@ st.write("---")
 st.header("Other Interests")
 
 data = {
-    'Hobby': ['Reading', 'Cooking', 'Hiking', 'Gaming'],
+    # อัปเดตตาราง หาก Gaming กลายเป็นงานอดิเรกหลักแล้ว
+    'Hobby': ['Reading', 'Cooking', 'Hiking', 'Watching Movies'], 
     'Frequency': ['Weekly', 'Daily', 'Monthly', 'Occasionally'],
-    'Note': ['Sci-fi and Fantasy', 'Thai and Italian food', 'Exploring local trails', 'Strategy games']
+    'Note': ['Sci-fi and Fantasy', 'Thai and Italian food', 'Exploring local trails', 'Action and Sci-fi genres']
 }
 
 df = pd.DataFrame(data)
@@ -39,7 +41,7 @@ st.dataframe(df, use_container_width=True, hide_index=True)
 
 st.write("---")
 
-# ส่วนที่ให้ผู้ใช้โต้ตอบ (Interactive element)
+# ส่วนที่ให้ผู้ใช้โต้ตอบ
 st.header("What's your favorite hobby?")
 user_hobby = st.text_input("Enter your hobby here:")
 
