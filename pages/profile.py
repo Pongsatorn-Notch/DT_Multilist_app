@@ -1,8 +1,7 @@
 import streamlit as st
 
-# ตั้งค่าหน้าเพจ (คุณสามารถตั้งค่าได้ในทุกหน้า แต่ st.set_page_config() ควรอยู่ในหน้าแรก)
-# สำหรับ Multipage App โดยปกติควรตั้งค่าหลักใน Entrypoint file
-# st.set_page_config(page_title="User Profile", page_icon="👤") 
+
+st.set_page_config(page_title="User Profile", page_icon="👤") 
 
 # ส่วนหลักของหน้า Profile
 st.markdown("# 👤 User Profile") 
